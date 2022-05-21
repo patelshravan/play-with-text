@@ -35,7 +35,7 @@ const Navbar = (props) => {
               </NavLink>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          {/* <form className="d-flex" role="search">
             <input
               className="form-control me-2"
               type="search"
@@ -45,7 +45,7 @@ const Navbar = (props) => {
             <button className="btn btn-outline-warning" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
         </div>
         <div
           className={`form-check form-switch text-${
