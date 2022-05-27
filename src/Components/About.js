@@ -28,8 +28,8 @@ const About = () => {
             >
               <div className="accordion-body">
                 PlayWithText gives you a way to analyze your text quickly and
-                efficiently. Be it word count, character count or minutes to
-                read.
+                efficiently. Be it word count, character count, minutes to read,
+                split into sentences and readibility grade.
               </div>
             </div>
           </div>
