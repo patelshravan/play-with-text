@@ -1,15 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/logo.png";
 
 const Navbar = (props) => {
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
-    >
+    <nav className={`navbar navbar-expand-lg bg-light`}>
       <div className="container-fluid">
         <NavLink to="/" className="navbar-brand">
-          {props.title}
+          <img
+            style={{
+              display: "flex",
+              width: "15rem",
+              height: "5rem",
+              marginTop: "-1.5rem",
+            }}
+            src={Logo}
+            alt=""
+          />
         </NavLink>
         <button
           className="navbar-toggler"
@@ -35,33 +43,6 @@ const Navbar = (props) => {
               </NavLink>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-warning" type="submit">
-              Search
-            </button>
-          </form> */}
-        </div>
-        <div
-          className={`form-check form-switch text-${
-            props.mode === "light" ? "dark" : "light"
-          }`}
-        >
-          <input
-            className="form-check-input"
-            type="checkbox"
-            role="switch"
-            onClick={props.toggleMode}
-            id="flexSwitchCheckDefault"
-          />
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
-            Dark Mode
-          </label>
         </div>
       </div>
     </nav>

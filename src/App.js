@@ -7,7 +7,6 @@ import About from "./Components/About";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
@@ -20,23 +19,9 @@ function App() {
     }, 1500);
   };
 
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      document.body.style.backgroundColor = "gray";
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-    }
-  };
   return (
-    <>
-      <Navbar
-        title={"PlayWithText"}
-        about={"About PlayWithText"}
-        mode={mode}
-        toggleMode={toggleMode}
-      />
+    <div>
+      <Navbar title={"PlayWithText"} about={"About PlayWithText"} />
       <Alert Alert={alert} />
       <div className="container my-3">
         <Routes>
@@ -46,14 +31,14 @@ function App() {
             element={
               <TextForm
                 showAlert={showAlert}
-                heading={"Enter the text to analyse below"}
+                heading={"Enter the text to analyze... "}
               />
             }
           />
           <Route exact path="/about" element={<About />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 
